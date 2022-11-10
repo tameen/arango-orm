@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python ORM Layer For ArangoDB &mdash; arango-orm 1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Getting Started" href="gettingstarted.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="#" class="icon icon-home"> arango-orm
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-reference.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">arango-orm</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+      <li>Python ORM Layer For ArangoDB</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="python-orm-layer-for-arangodb">
+<h1>Python ORM Layer For ArangoDB<a class="headerlink" href="#python-orm-layer-for-arangodb" title="Permalink to this headline"></a></h1>
+<p><strong>arango_orm</strong> is a python ORM layer inspired by SQLAlchemy but aimed to work with the multi-model database ArangoDB. It supports accessing both collections and graphs using the ORM. The actual communication with the database is done using <strong>python-arango</strong> (the database driver for accessing arangodb from python) and object serialization and de-serialization is handled using <strong>marshmallow</strong>.</p>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Content</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#connecting-database">Connecting Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#working-with-collections">Working With Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#create-collection-in-the-database">Create Collection in the Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#add-records">Add Records</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#get-total-records-in-the-collection">Get Total Records in the Collection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#get-record-by-key">Get Record By Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#update-a-record">Update a Record</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#delete-a-record">Delete a Record</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#get-all-records-in-a-collection">Get All Records in a Collection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#get-first-record-matching-the-query">Get First Record Matching the Query</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#filter-records">Filter Records</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#filter-using-or">Filter Using OR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#filter-sort-and-limit">Filter, Sort and Limit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#fetch-only-some-fields">Fetch Only Some Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#update-multiple-records">Update Multiple Records</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#delete-multiple-records">Delete Multiple Records</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#delete-all-records">Delete All Records</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#bulk-create-records">Bulk Create Records</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#bulk-update-records">Bulk Update Records</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#query-using-aql">Query Using AQL</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-reference.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-reference.html#collections">Collections</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="gettingstarted.html" class="btn btn-neutral float-right" title="Getting Started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Tameen.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
