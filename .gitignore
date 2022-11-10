@@ -1,0 +1,5 @@
+#ignore virtual envirnonment
+
+arango-ormenv/
+docs/source/_templates/
+
