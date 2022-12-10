@@ -11,10 +11,10 @@ Install the package
 
 ::
 
-    pip install arango-orm
+    	pip install arango-orm
  
-Connecting Database
--------------------
+Connecting :ref:`Database <databaseapi>`
+-------------------------------------------
 
 .. code-block:: python
 
@@ -25,8 +25,8 @@ Connecting Database
     db = Database(test_db)
     
 
-Working With Collections
--------------------------
+Working With :ref:`Collection <collectionapi>`
+---------------------------------------------------
 
 First we need to define data models (similar to SQLAlchemy’s models) to specify what data our collection will contain and how to marshal it.
 
@@ -42,8 +42,8 @@ First we need to define data models (similar to SQLAlchemy’s models) to specif
     name = String(required=True, allow_none=False)
     dob = Date()
 
-Create Collection in the Database
-----------------------------------
+Create :ref:`Collection <collectionapi>` in the :ref:`Database<databaseapi>`
+------------------------------------------------------------------------------
 
 .. code-block:: python
 
@@ -59,8 +59,8 @@ Add Records
     db.add(s)
     print(s._id)  # students/12312
 
-Get Total Records in the Collection
--------------------------------------
+Get Total Records in the :ref:`Collection <collectionapi>`
+-----------------------------------------------------------
 
 .. code-block:: python
 
@@ -89,8 +89,8 @@ Delete a Record
     s = db.query(Student).by_key('12312')
     db.delete(s)
 
-Get All Records in a Collection
---------------------------------
+Get All Records in a :ref:`Collection <collectionapi>`
+-------------------------------------------------------
 .. code-block:: python
 
     students = db.query(Student).all()
@@ -135,8 +135,8 @@ Filter, Sort and Limit
     page_num, per_page = 2, 10
     page = db.query(Student).sort("name DESC").limit(per_page,start_from=(page_num - 1) * per_page)
 
-Fetch Only Some Fields
------------------------
+Fetch Only Some :ref:`Fields <fieldsapi>`
+------------------------------------------
 .. code-block:: python
 
     c = db.query(Student).limit(2).returns('_key', 'name').first()

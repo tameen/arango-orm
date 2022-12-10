@@ -13,6 +13,9 @@ Python ORM Layer For ArangoDB
    
    gettingstarted
    api-reference
+   collection
+   database
+   fields
 
    
       
